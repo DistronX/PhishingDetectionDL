@@ -7,7 +7,8 @@ import inputScript
 
 #load model
 app = Flask(__name__)
-model = pickle.load(open('Phishing_Website.pkl', 'rb'))
+from keras.models import load_model
+model = load_model('Phishing_Website.h5')
 
 @app.route('/')
 def index():
@@ -29,7 +30,7 @@ def y_predict():
     prediction = model.predict(checkprediction)
     print(prediction)
     output=prediction[0]
-    if(output==1):
+    if(output>0):
         pred="Your are safe!!  This is a Legitimate Website."
         
     else:
