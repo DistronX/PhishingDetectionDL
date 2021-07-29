@@ -7,7 +7,7 @@ import inputScript
 
 #load model
 app = Flask(__name__)
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 model = load_model('Phishing_Website.h5')
 
 @app.route('/')
