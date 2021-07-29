@@ -28,9 +28,10 @@ def y_predict():
     url = request.form['URL']
     checkprediction = inputScript.main(url)
     prediction = model.predict(checkprediction)
-    print(prediction)
+    prediction1=(prediction[0]>0.5).round()
+    print(prediction1)
     output=prediction[0]
-    if(output>0):
+    if(output==1):
         pred="Your are safe!!  This is a Legitimate Website."
         
     else:
