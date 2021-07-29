@@ -49,6 +49,10 @@ def predict_api():
     output = prediction[0]
     return jsonify(output)
 
+@app.route('/about')
+def predict():
+    return render_template('about.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
 
