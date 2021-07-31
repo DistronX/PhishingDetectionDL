@@ -19,6 +19,9 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
 <style>
+         body {
+            background-image: url("{{ url_for('static', filename='img/predict_background.jpg') }}");
+         }
 .login{
 top: 20%;
 }
@@ -26,6 +29,7 @@ top: 20%;
 </head>
 
 <body>
+    
     <div class="contrainer">
         <a class="back-button rounded" href="/"><i class="fas fa-arrow-left"></i></button>
         <a class="reload-predict rounded" href="/predict"><i class="fas fa-sync-alt"></i></button>
