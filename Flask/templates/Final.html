@@ -26,31 +26,35 @@ top: 20%;
 </head>
 
 <body>
-	<a class="back-button rounded" href="/"><i class="fas fa-arrow-left"></i></button>
-	<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand"><a href="#">Menu</a></li>
-            <li class="sidebar-nav-item"><a href="/#page-top">Home</a></li>
-            <li class="sidebar-nav-item"><a href="/predict">Predict</a></li>
-            <li class="sidebar-nav-item"><a href="/about">About the Model</a></li>
-            <li class="sidebar-nav-item"><a href="/#services">About our team</a></li>
-            <li class="sidebar-nav-item"><a href="/#portfolio">Features</a></li>
-            <li class="sidebar-nav-item"><a href="/#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="contrainer">
+        <a class="back-button rounded" href="/"><i class="fas fa-arrow-left"></i></button>
+        <a class="reload-predict rounded" href="/predict"><i class="fas fa-sync-alt"></i></button>
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a> 
+            <nav id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand"><a href="#">Menu</a></li>
+                    <li class="sidebar-nav-item"><a href="/#page-top">Home</a></li>
+                    <li class="sidebar-nav-item"><a href="/predict">Predict</a></li>
+                    <li class="sidebar-nav-item"><a href="/about">About the Model</a></li>
+                    <li class="sidebar-nav-item"><a href="/#services">About our team</a></li>
+                    <li class="sidebar-nav-item"><a href="/#portfolio">Features</a></li>
+                    <li class="sidebar-nav-item"><a href="/#contact">Contact</a></li>
+                </ul>
+            </nav>
+    </div>
 
-	<div class="container text-center">
+	<div class="container text-center card" style="width: 70%; position: relative; top: 10rem;">
 		<br><br>
 		<h1>Phishing Website Detection using Machine Learning<h1></h1>
 		<form action="{{ url_for('y_predict')}}"method="post">
-			<input class="prdSpacing" type="text" name="URL" placeholder="Enter the URL to be verified" required="required"/><br>
-			<button type="submit" class="btn btn-primary btn-block btn-large prdSpacing">Predict</button>
+			<input style="width: 70%; text-align: center;" class="prdSpacing" type="text" name="URL" placeholder="Enter the URL to be verified" required="required"/><br>
+			<button style="width: 10rem; height: 3rem;" type="submit" class="btn btn-primary btn-block btn-large prdSpacing">Predict</button>
 		</form>
 		<br><br>
 		<div id='result',class='result' style='color:black;font-size:30px;'>{{ prediction_text }}</div>
 		<a href=" {{ url }} "> {{ url }} </a>
 		<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        <br>
 	</div>
 </body>
 </html>
