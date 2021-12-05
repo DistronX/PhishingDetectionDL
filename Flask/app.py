@@ -58,10 +58,10 @@ def y_predict():
     # print(prediction1)
 
     if(output==1):
-        pred="Your are safe!!  This is a Legitimate Website."
+        pred="SAFE. This is a Legitimate Website."
         
     else:
-        pred="You are on the wrong site. Be cautious!"
+        pred="UNSAFE. This is a Phishing Website."
     return render_template('Final.html', prediction_text='{}'.format(pred),url=url)
 
 #Takes the input parameters fetched from the URL by inputScript and returns the predictions

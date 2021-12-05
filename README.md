@@ -7,8 +7,6 @@ In `app.py` file on line 32 enter your IBM Watson API key
 ## Team Members
 1. Ambuj Gupta (19BCE0366)
 2. Karan Rochlani (19BCE0383)
-3. Harshal Vijay Gadge (19BAI10033)
-4. DVS Hitesh Reddy (19BEC1066)
 
 ## Demo Video Link
 https://drive.google.com/file/d/13-SjGuaYG8ZK34ltXTSoAPUTb2vNpsya/view?usp=sharing
